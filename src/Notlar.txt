@@ -1,0 +1,13 @@
+referans tipler, yazılımda değişimi sağlar.
+
+primitive (değer tipler)(int, byte,double..) stackte tutulur.
+
+diziler, referans tiptir. örn. int[] s1 =new[] {1, 2, 3} diyelim. s1 bellekte 101le tutulsun,
+bellekte bu üç sayının referansını 101 adresi tutar. newi kullanırsak nesne heap kısmında oluşur.
+
+int[] s2 =new[] {10, 20, 30} ikinci bir dizi oluşturulup
+
+int sayi1= int sayi2; deyince sayi2'nin değerini sayi1 e atar.
+ama s1=s2; denirse onun değerini değil adresini ata demek
+s1 in referans numarası =s2nin ref nu. yani s1(101) =s2(102). yani s1 arrayi artık 102 nolu nesneyi tutuyor.
+101 nolu tutulmayan nesneyi garbage coll. temizler.
