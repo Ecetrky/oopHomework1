@@ -1,3 +1,4 @@
+TİPLER------
 referans tipler, yazılımda değişimi sağlar.
 
 primitive (değer tipler)(int, byte,double..) stackte tutulur.
@@ -12,4 +13,59 @@ yani s1=102 olur.
 s1 in referans numarası =s2nin ref nu. yani s1(101) =s2(102). yani s1 arrayi artık 102 nolu nesneyi tutuyor.
 101 nolu tutulmayan nesneyi garbage coll. temizler.
 
-Interface,
+
+
+CLASSLAR------
+Classlar, içinde yapacağımız işlemleri (operasyonları) veya bilgi tutan yapılardır.
+
+Bir class sadece bir işi yapabilir. Müşterinin (Customer class) özelliklerini tutan bir class'a aynı zamanda müşterinin veritabanına eklemesiyle
+ilgili opersyon kodların yazılması SOLID prensibine uygun değildir. (CustomerManager class) adında yeni bir operasyon tutucu class oluşturulmalıdır.
+
+Neden kullanılır?
+-Örneğin arkaplanda binlerce işlem yapılan bir bankada kredi işlemleri yapan bir program.
+-Örneğin CreditManager, krediyle ilgili işlemleri yapan sınıf
+
+Bir banka düşünürsek, operasyonları tutan classları olduğu gibi özellikleri tutan classları da vardır.
+Mesela, çalışanları (Employee class)  tutan, müşterileri (Customer class) tutan gibi.
+
+
+CONSTRUCTORS------
+Alttaki koda baktığımızda, sadece bu class tarafından erişilebilen bir _customer değişkeni oluşturulur.
+Constructor metodunun içinde customer nesnesi parametre olarak verilir
+
+
+
+public class CustomerManager {
+
+    private Customer _customer;
+    public CustomerManager(Customer customer) {  //beni çalıştırabilmek için bana bir tane müşteri ver
+        _customer=customer;
+    }
+
+    public void save() {
+        System.out.println("Müşteri veritabanına kaydedildi: " + _customer);
+    }
+}
+
+INHERITANCE------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
